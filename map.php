@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Simple Map</title>
+        <title>Touber</title>
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <style>
-
+            .student_p{
+                cursor:pointer;
+            }
             .profile_icon_sm{
                 border-radius: 50%;
                 height: 100%;
@@ -39,7 +41,7 @@
                 position: absolute;
                 right: 4px;
                 overflow-y: scroll;
-                height:650px;
+                height:500px;
                 background-color: rgba(25, 20, 20, 0.7);
                 color:white;
                 font-family: Verdana, Geneva, sans-serif;
@@ -77,8 +79,11 @@
 
             <div class="">
                 <div id="feed">
+                    <div id="avail_time">
+
+                    </div>
                     <br/>
-                    <div class="row">
+                    <div class="row student_p" id="1">
 
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-2.png">
@@ -92,7 +97,7 @@
 
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row student_p" id="2">
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-b.png">
                         </div>
@@ -105,7 +110,7 @@
 
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row student_p" id="3">
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-3.png">
                         </div>
@@ -162,23 +167,33 @@
                     generateFixedMarkers(map);
 
 
+                    // append available time
+                    $("#avail_time").append("Tour Guides available on " + getFormattedDate());
+                    
+                    $(".student_p").on("click",function(){
+                        google.maps.event.trigger(markers[parseInt($(this).attr('id'))], 'click');
+                    });
+
                 });
 
                 function generateFixedMarkers(map) {
-                    addMarker({lat: 42.359899, lng: -71.058329}, '', '', '', "hi my name is....");
-                    addMarker({lat: 42.359300, lng: -71.058101}, '', '', '', "hi my name is....");
-                    addMarker({lat: 42.359220, lng: -71.057213}, '', '', '', "hi my name is....");
+                    var html1 = "<img class='profile_icon_sm' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/28f/080/2e6d81b.jpg'><br/>"
+                            + "<p>hi my name is Wellesley Arreza.</p>"
+                            + "<p>My email is wra216@lehigh.edu</p>"
+                            ;
+                    addMarker({lat: 42.358899, lng: -71.058700}, 's1', '', '', html1);
+                    addMarker({lat: 42.377295, lng: -71.116393}, 's2', '', '', "hi I am Bryan....");
+                    addMarker({lat: 42.360091, lng: -71.09416}, 's3', '', '', "Hey, I'm Sara...");
 
                     showMarkers(map);
-
-
 
                 }
 
 
-                function addMarker(location, source, link, title, desc) {
+                function addMarker(location, id, link, title, desc) {
 
                     var marker = new google.maps.Marker({
+                        id: "m"+id,
                         position: location,
                         map: map
                                 //icon: image
@@ -225,6 +240,13 @@
                 // Shows any markers currently in the array.
                 function showMarkers(map) {
                     setMapOnAll(map);
+                }
+
+                function getFormattedDate() {
+                    var date = new Date();
+                    var str = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
+
+                    return str;
                 }
 
 
