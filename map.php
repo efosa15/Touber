@@ -4,8 +4,9 @@
         <title>Touber</title>
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
-        <link href="css/3-col-portfolio.css" rel="stylesheet">
+
         <!-- Latest compiled and minified CSS -->
+        <link href="css/3-col-portfolio.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <style>
             .student_p{
@@ -69,6 +70,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="./js/xml2json.js"></script>
+
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -79,8 +81,8 @@
 
                 <div>
                     <ul class="nav navbar-nav">
-                        <li id="act" ><a href="index.php">Home</a></li>
-                        <li class="active"><a id="headerMenu" href="map.php">Map</a></li>
+                        <li id="act" class="active"><a href="index.php">Home</a></li>
+                        <li><a id="headerMenu" href="map.php">Map</a></li>
                         <li><a id="headerMenu"href="survey.php">Survey</a></li>
                         <li><a id="headerMenu" href="#">Help</a></li>
                     </ul>
@@ -194,6 +196,10 @@
                             window.location.href = "registerTour.php";
                         });
                     });
+                    function show() {
+                        window.location.href = "registerTour.php";
+
+                    }
 
                 });
 
@@ -202,7 +208,7 @@
                             + "<h5 style='padding-left:30px; float:right;'>Wellesley Arreza.</h5>"
                             + "<br/><p>My email is wra216@lehigh.edu</p>"
                             + "<p>If you want to visit some interesting places, call me @ 7327107074</p>"
-                            + "<button class='btn btn-success register'>Need a Tour? </button>"
+                            + "<button onclick= 'show();' class='btn btn-success register'>Need a Tour? </button>"
                             + "</div>";
                     addMarker({lat: 42.358899, lng: -71.058700}, 's1', '', '', html1);
                     addMarker({lat: 42.377295, lng: -71.116393}, 's2', '', '', "hi I am Bryan....");
@@ -217,18 +223,13 @@
                     addMarker({lat: 42.3505, lng: -71.105399}, 's4', '', '', "Hey, I'm Tara...");
                     addMarker({lat: 42.340083, lng: -71.166975}, 's5', '', '', "Hey, I'm Josh...");
                     addMarker({lat: 42.340083, lng: -71.166975}, 's6', '', '', "Hey, I'm Ryan...");
-                    addMarker({lat: 40.606909, lng:  -75.378283}, 's7', '', '', "Hey, I'm Kim...");
+                    addMarker({lat: 40.606909, lng: -75.378283}, 's7', '', '', "Hey, I'm Kim...");
                     addMarker({lat: 40.349287, lng: -74.658233}, 's8', '', '', "Hey, I'm Taylor...");
                     addMarker({lat: 33.65183, lng: -117.838942}, 's9', '', '', "Hey, I'm Tae...");
                     addMarker({lat: 42.360091, lng: -71.09416}, 's10', '', '', "Hey, I'm Morgan...");
 
 
                     showMarkers(map);
-
-                    $(".register").on("click", function () {
-
-                        window.location.href = "registerTour.php";
-                    });
                 }
 
 
