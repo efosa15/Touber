@@ -1,3 +1,10 @@
+<?php
+include('classes/Database.php');
+$db = new Database();
+$connection = $db->connect();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,11 +34,11 @@
             }
         </style>
         <script>
-        $(function(){
-           $("#Start").on("click",function(){
-              window.location.href = "map.php";
-           }); 
-        });
+            $(function () {
+                $("#Start").on("click", function () {
+                    window.location.href = "map.php";
+                });
+            });
         </script>
     </head>
 
@@ -81,10 +88,10 @@
                 <div class="col-lg-offset-4 col-lg-4" style="text-align: center;">
                     <button id="Start" class="btn btn-success btn-group">Campus Visitors</button>
                     <br/>
-                     <button id="Profile" class="btn btn-primary btn-group">Current Students</button>
+                    <button id="Profile" class="btn btn-primary btn-group">Current Students</button>
                 </div>
             </div>
-            
+
         </div>
 
     </body>
