@@ -14,7 +14,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a id="headerMenu" class="navbar-brand" href="index.html">Touber</a>
+                    <a id="headerMenu" class="navbar-brand" href="index.php">Touber</a>
                 </div>
 
                 <div>
