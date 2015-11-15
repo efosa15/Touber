@@ -100,7 +100,7 @@
 
                     </div>
                     <br/>
-                    <div class="row student_p" id="1">
+                    <div class="row student_p" id="0">
 
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-2.png">
@@ -114,7 +114,7 @@
 
                         </div>
                     </div>
-                    <div class="row student_p" id="2">
+                    <div class="row student_p" id="1">
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-b.png">
                         </div>
@@ -127,7 +127,7 @@
 
                         </div>
                     </div>
-                    <div class="row student_p" id="3">
+                    <div class="row student_p" id="2">
                         <div class="col-md-offset-1 col-md-3">
                             <img class="profile_icon_sm" src="image/icon-sm-3.png">
                         </div>
@@ -179,7 +179,7 @@
                     var link;
                     var title;
                     var desc = "My name is...";
-                    addMarker({lat: lat, lng: long}, '', link, title, desc);
+                    //addMarker({lat: lat, lng: long}, '', link, title, desc);
                     showMarkers(map);
                     generateFixedMarkers(map);
 
@@ -207,6 +207,21 @@
                     addMarker({lat: 42.358899, lng: -71.058700}, 's1', '', '', html1);
                     addMarker({lat: 42.377295, lng: -71.116393}, 's2', '', '', "hi I am Bryan....");
                     addMarker({lat: 42.360091, lng: -71.09416}, 's3', '', '', "Hey, I'm Sara...");
+                    //42.3505 , -71.105399 Boston University
+                    //42.340083, -71.166975 Boston College
+                    // 42.340083, -71.166975 Tufts University
+                    //40.606909 , -75.378283 Lehigh University
+                    // 40.349287, -74.658233 Princeton
+                    //33.65183, -117.838942 Stanford
+                    // 42.360091, -71.09416 MIT
+                    addMarker({lat: 42.3505, lng: -71.105399}, 's4', '', '', "Hey, I'm Tara...");
+                    addMarker({lat: 42.340083, lng: -71.166975}, 's5', '', '', "Hey, I'm Josh...");
+                    addMarker({lat: 42.340083, lng: -71.166975}, 's6', '', '', "Hey, I'm Ryan...");
+                    addMarker({lat: 40.606909, lng:  -75.378283}, 's7', '', '', "Hey, I'm Kim...");
+                    addMarker({lat: 40.349287, lng: -74.658233}, 's8', '', '', "Hey, I'm Taylor...");
+                    addMarker({lat: 33.65183, lng: -117.838942}, 's9', '', '', "Hey, I'm Tae...");
+                    addMarker({lat: 42.360091, lng: -71.09416}, 's10', '', '', "Hey, I'm Morgan...");
+
 
                     showMarkers(map);
 
