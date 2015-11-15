@@ -74,13 +74,9 @@ $connection = $db->connect();
             </div>
             <div class="row">
                 <div class="col-lg-12"> 
-                    <p id="content">Many people come and go, some of them for pleasure, others for responsibilities such as work and studies...
-                        But what do all this people have in common? Many of them don't know the place they are going to and even less
-                        where they are going to stay. Isn't that scary? Pretty scary. </br></br>
+                    <p id="content">
                         Touber matches current students (and people) in your city with tourists,
-                        families, new students... Everyone! So you can get a tour to the most appealing and interesting places in city. It doesn't 
-                        matter your intentions! Maybe you just saw a point of interest in the map and want to go to visit with someone who has what you need: information about the place and
-                        knowledge! Students love knowledge... and so do you.
+                        families, new students... Everyone! So you can get a tour to the most appealing and interesting places on campus. Feel free to try our app today!
                 </div>
             </div>
 
