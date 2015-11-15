@@ -140,44 +140,9 @@
                     url: 'http://sleepy-sierra-9008.herokuapp.com/', //http://localhost:8080/
                     type: "POST",
                     data: urlSTR,
-                    //http://rss.nytimes.com/services/xml/rss/nyt/World.xml
-                    //http://feeds.bbci.co.uk/news/rss.xml?edition=int
-                    //http://america.aljazeera.com/content/ajam/articles.rss
-                    //http://feeds.reuters.com/Reuters/worldNews
                     success: function (data) {
-                        //console.log(data);
-                        /*
-                         * data.results
-                         * aljazeera
-                         // doha Qatar
-                         // Latitutde: 25.2916097
-                         // long : 51.5304368
-                         */
 
-                        $(data).find("item").each(function () {
-                            var title = $(this).find("title").text();
-                            var link = $(this).find("guid").text();
-                            var description = $(this).find("description").text();
-                            var randomLat = Math.floor(Math.random() * 6) + 1;
-                            var randomLng = Math.floor(Math.random() * 6) + 1;
-                            var marker = new google.maps.Marker({
-                                position: {lat: 25.2916097 + randomLat, lng: 51.5304368 + randomLng},
-                                map: map,
-                                title: 'Al Jazeera'
-                                        //icon: iconBase + 'schools_maps.png' 
-
-                            });
-
-                            var infowindow = new google.maps.InfoWindow({
-                                content: "<a href='" + link + "'>" + title + "</a>"
-                            });
-                            marker.addListener('click', function () {
-                                infowindow.open(map, marker);
-                            });
-
-                            $("#feed").append("<a href='" + link + "'>" + title + "</a></br>");
-
-                        });
+                   
 
                     },
                     failure: function (err) {
@@ -185,51 +150,6 @@
                     }
                 });
 
-
-                $(".myButton").on('click', function () {
-                    var str = $("#search").val();
-                    var arr = str.split(" ");
-                    var urlParam = "";
-                    for (i = 0; i < arr.length; i++) {
-                        if (i > 1) {
-                            urlParam += '%20';
-                        }
-                        urlParam += arr[i];
-                    }
-                    urlSTR = 'https://ajax.googleapis.com/ajax/services/search/news?v=1.0&q=' + urlParam;
-                    $.ajax({
-                        url: 'http://sleepy-sierra-9008.herokuapp.com/', //http://localhost:8080/
-                        type: "POST",
-                        data: urlSTR,
-                        //http://rss.nytimes.com/services/xml/rss/nyt/World.xml
-                        //http://feeds.bbci.co.uk/news/rss.xml?edition=int
-                        //http://america.aljazeera.com/content/ajam/articles.rss
-                        //http://feeds.reuters.com/Reuters/worldNews
-                        success: function (data) {
-
-                            console.log(JSON.stringify(eval('(' + data + ')')));
-                            data = JSON.stringify(eval('(' + data + ')'));
-                            data = JSON.parse(data);
-                            $("#feed").empty();
-                            data.responseData.results.forEach(function (d) {
-                                console.log(d);
-                                //content
-                                //publisher
-                                //title
-                                //url
-
-                                var link = d.unescapedUrl;
-                                var title = d.title;
-
-                                $("#feed").append("<p><a href='" + link + "'>" + title + "</a></br></p>");
-                            });
-
-                        },
-                        failure: function (err) {
-                            console.log(err);
-                        }
-                    });
-                });
 
 
 
