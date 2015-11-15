@@ -38,6 +38,9 @@ $connection = $db->connect();
                 $("#Start").on("click", function () {
                     window.location.href = "map.php";
                 });
+                $("#Profile").on("click", function () {
+                    window.location.href = "studentAccount.php";
+                });
             });
         </script>
     </head>
