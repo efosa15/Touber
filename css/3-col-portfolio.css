@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-inverse{
-    /* background-color: #ED2E31; */
+    background-color: #ED2E31;
     border-color: black;
 }
 
@@ -44,16 +44,34 @@ body {
     font-size: 225%;
     font-weight: bolder;
 }
-
-#itemsContainer, #product{
-	margin: 0 auto;
-	margin-top: 5px;
+#container{
+    
+    background-color: #F9F9F9;
+    margin-top: -20px;
+    border-left: 2px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 50px;
 }
 
-#product{
-	height: 200px;
+.row{
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
+#par{
+    text-align: justify;
+}
+#explaination, #action {
+    text-align: center;
+}
+
+#action{
+    margin-top: 10px;
+}
+#radiobtn{
+    margin-left: 20px;
+    
+}
 footer {
     margin: 50px 0;
 }
