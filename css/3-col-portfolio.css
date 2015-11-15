@@ -44,10 +44,18 @@ body {
     font-size: 225%;
     font-weight: bolder;
 }
+#container{
+    
+    background-color: #F9F9F9;
+    margin-top: -20px;
+    border-left: 2px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 50px;
+}
 
-#itemsContainer, #product{
-	margin: 0 auto;
-	margin-top: 5px;
+.row{
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #product{
