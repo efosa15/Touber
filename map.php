@@ -177,10 +177,11 @@
                 });
 
                 function generateFixedMarkers(map) {
-                    var html1 = "<img class='profile_icon_sm' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/28f/080/2e6d81b.jpg'><br/>"
-                            + "<p>hi my name is Wellesley Arreza.</p>"
-                            + "<p>My email is wra216@lehigh.edu</p>"
-                            ;
+                    var html1 = "<div><img class='profile_icon_sm' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/28f/080/2e6d81b.jpg'>"
+                            + "<h5 style='padding-left:30px; float:right;'>Wellesley Arreza.</h5>"
+                            + "<br/><p>My email is wra216@lehigh.edu</p>"
+                            + "<p>If you want to visit some interesting places, call me @ 7327107074</p>"
+                            +"</div>";
                     addMarker({lat: 42.358899, lng: -71.058700}, 's1', '', '', html1);
                     addMarker({lat: 42.377295, lng: -71.116393}, 's2', '', '', "hi I am Bryan....");
                     addMarker({lat: 42.360091, lng: -71.09416}, 's3', '', '', "Hey, I'm Sara...");
