@@ -19,9 +19,9 @@
 
                 <div>
                     <ul class="nav navbar-nav">
-                        <li id="act"><a href="index.php">Home</a></li>
-                        <li class="active"><a id="headerMenu"  href="map.php">Map</a></li>
-                        <li><a id="headerMenu" href="survey.php">Survey</a></li>
+                        <li id="act" class="active"><a href="index.php">Home</a></li>
+                        <li><a id="headerMenu" href="map.php">Map</a></li>
+                        <li><a id="headerMenu"href="survey.php">Survey</a></li>
                         <li><a id="headerMenu" href="#">Help</a></li>
                     </ul>
                 </div>
