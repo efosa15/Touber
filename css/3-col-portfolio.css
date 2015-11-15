@@ -16,8 +16,12 @@ body {
     background-color: #b30000 !important;
 }
 
-#haderMenu:focus, #headerMenu:hover{
+#headerMenu:focus, #headerMenu:hover{
     color: #333;
+}
+
+.navbar-brand{
+    font-weight: bolder;
 }
 .portfolio-item {
     margin-bottom: 10px;
@@ -26,6 +30,20 @@ body {
     border-bottom: 1px solid black;
 }
 
+#header{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#content{
+    font-size: 16px;
+    text-align: justify;
+}
+
+#content::first-letter{
+    font-size: 225%;
+    font-weight: bolder;
+}
 
 #itemsContainer, #product{
 	margin: 0 auto;
