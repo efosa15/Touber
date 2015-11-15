@@ -76,7 +76,8 @@ $connection = $db->connect();
                 <div class="col-lg-12"> 
                     <p id="content">
                         Touber matches current students (and people) in your city with tourists,
-                        families, new students... Everyone! So you can get a tour to the most appealing and interesting places on campus. Feel free to try our app today!
+                        families, new students... Everyone! So you can get a tour to the most appealing and interesting places on campus. 
+                        Feel free to try our app today!
                 </div>
             </div>
 
