@@ -1,0 +1,59 @@
+body {
+    padding-top: 70px; 
+
+}
+
+.navbar-inverse{
+    background-color: #ED2E31;
+    border-color: black;
+}
+
+#headerMenu{
+    color: white;
+}
+
+.active a{
+    background-color: #b30000 !important;
+}
+
+#headerMenu:focus, #headerMenu:hover{
+    color: #333;
+}
+
+.navbar-brand{
+    font-weight: bolder;
+}
+.portfolio-item {
+    margin-bottom: 10px;
+    width: 350px;
+    height: 250px;
+    border-bottom: 1px solid black;
+}
+
+#header{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#content{
+    font-size: 16px;
+    text-align: justify;
+}
+
+#content::first-letter{
+    font-size: 225%;
+    font-weight: bolder;
+}
+
+#itemsContainer, #product{
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+#product{
+	height: 200px;
+}
+
+footer {
+    margin: 50px 0;
+}
