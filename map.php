@@ -6,6 +6,7 @@
         <meta charset="utf-8">
 
         <!-- Latest compiled and minified CSS -->
+        <link href="css/3-col-portfolio.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <style>
             .student_p{
@@ -40,8 +41,9 @@
             #feed{
                 position: absolute;
                 right: 4px;
+                top: 170px;
                 overflow-y: scroll;
-                height:500px;
+                height:350px;
                 background-color: rgba(25, 20, 20, 0.7);
                 color:white;
                 font-family: Verdana, Geneva, sans-serif;
@@ -68,8 +70,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="./js/xml2json.js"></script>
+        
     </head>
     <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  		<div class="container">
+    		<div class="navbar-header">
+      		<a id="headerMenu" class="navbar-brand" href="index.php">Touber</a>
+    		</div>
+
+    		<div>
+      			<ul class="nav navbar-nav">
+        		<li id="act" class="active"><a href="index.php">Home</a></li>
+        		<li><a id="headerMenu" href="map.php">Map</a></li>
+        		<li><a id="headerMenu"href="survey.php">Survey</a></li>
+                        <li><a id="headerMenu" href="#">Help</a></li>
+      			</ul>
+    		</div>
+  		</div>
+	</nav>
 
         <div class="row">
 
@@ -169,9 +188,13 @@
 
                     // append available time
                     $("#avail_time").append("Tour Guides available on " + getFormattedDate());
-                    
-                    $(".student_p").on("click",function(){
+
+                    $(".student_p").on("click", function () {
                         google.maps.event.trigger(markers[parseInt($(this).attr('id'))], 'click');
+                        $(".register").on("click", function () {
+
+                            window.location.href = "registerTour.php";
+                        });
                     });
 
                 });
@@ -181,20 +204,25 @@
                             + "<h5 style='padding-left:30px; float:right;'>Wellesley Arreza.</h5>"
                             + "<br/><p>My email is wra216@lehigh.edu</p>"
                             + "<p>If you want to visit some interesting places, call me @ 7327107074</p>"
-                            +"</div>";
+                            + "<button class='btn btn-success register'>Need a Tour? </button>"
+                            + "</div>";
                     addMarker({lat: 42.358899, lng: -71.058700}, 's1', '', '', html1);
                     addMarker({lat: 42.377295, lng: -71.116393}, 's2', '', '', "hi I am Bryan....");
                     addMarker({lat: 42.360091, lng: -71.09416}, 's3', '', '', "Hey, I'm Sara...");
 
                     showMarkers(map);
 
+                    $(".register").on("click", function () {
+
+                        window.location.href = "registerTour.php";
+                    });
                 }
 
 
                 function addMarker(location, id, link, title, desc) {
 
                     var marker = new google.maps.Marker({
-                        id: "m"+id,
+                        id: "m" + id,
                         position: location,
                         map: map
                                 //icon: image

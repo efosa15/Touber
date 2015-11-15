@@ -5,16 +5,21 @@
   		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
   		<link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/3-col-portfolio.css" rel="stylesheet">
+                <link href="css/3-col-portfolio.css" rel="stylesheet">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</head>
+        <?php
+        include('classes/Database.php');
+        $db = new Database(); 
+        $connection = $db->connect();
+        ?>
 
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   		<div class="container">
     		<div class="navbar-header">
-      		<a id="headerMenu" class="navbar-brand" href="index.html">Touber</a>
+      		<a id="headerMenu" class="navbar-brand" href="index.php">Touber</a>
     		</div>
 
     		<div>
@@ -46,7 +51,8 @@
                    Touber matches current students (and people) in your city with tourists,
                    families, new students... Everyone! So you can get a tour to the most appealing and interesting places in city. It doesn't 
                    matter your intentions! Maybe you just saw a point of interest in the map and want to go to visit with someone who has what you need: information about the place and
-                   knowledge! Students love knowledge... and so do you.
+                   knowledge! Students love knowledge... and so do you, or you are just more lost than Waldo in your new city and need someone to figure things out.
+                   Touber have you covered!
                 </div>
                    
             </div>
